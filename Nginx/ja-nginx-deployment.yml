@@ -4,6 +4,7 @@ metadata:
   name: nginx-deployment
   labels:
     app: ja-nginx
+  namespace: ja-nginx-env
 spec:
   replicas: 1
   selector:

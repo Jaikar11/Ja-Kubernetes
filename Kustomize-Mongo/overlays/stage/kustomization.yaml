@@ -1,0 +1,9 @@
+resources:
+  - mongo-db-deploy.yaml
+  - mongo-express-deploy.yaml
+  - mongo-secrets.yaml
+  - mongo-services.yaml
+
+namePrefix: ja-
+commonAnnotations:
+  version: 0.0.1

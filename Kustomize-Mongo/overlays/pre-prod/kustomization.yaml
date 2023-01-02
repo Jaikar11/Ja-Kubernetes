@@ -1,0 +1,9 @@
+bases:
+- ../../base
+namePrefix: ja-prd-
+commonLabels:
+  env: pre-prod
+
+patches:
+- deployment.yaml
+- service.yaml

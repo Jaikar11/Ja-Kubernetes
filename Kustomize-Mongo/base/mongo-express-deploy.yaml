@@ -33,5 +33,5 @@ spec:
             - name: ME_CONFIG_MONGODB_SERVER
               valueFrom:
                 configMapKeyRef:
-                  name: mongo-configmap
+                  name: ja-mongo-configmap
                   key: mongo_database_url

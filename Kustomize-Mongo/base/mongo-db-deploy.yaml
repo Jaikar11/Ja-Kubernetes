@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ja-mongo-db-deploy
+  name: mongo-db-deploy
   labels:
     app: ja-mongo-db
 spec:
@@ -23,10 +23,10 @@ spec:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
             secretKeyRef:
-              name: ja-mongo-creds
+              name: mongo-creds
               key: mongodbadmin-username
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: ja-mongo-creds
+              name: mongo-creds
               key: mongodbadmin-password

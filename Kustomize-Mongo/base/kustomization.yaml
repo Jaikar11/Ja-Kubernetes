@@ -1,10 +1,11 @@
-# resources:
-#   - mongo-db-deploy.yaml
-#   - mongo-express-deploy.yaml
-#   - mongo-secrets.yaml
-#   - mongo-services.yaml
+resources:
+  - mongo-db-deploy.yaml
+  - mongo-express-deploy.yaml
+  - mongo-secrets.yaml
+  - mongo-services.yaml
 
-# commonLabels:
-#   type: demo
-# commonAnnotations:
-#   version: 1.1.0
+namePrefix: ja-
+commonLabels:
+  type: demo
+commonAnnotations:
+  version: 0.0.1

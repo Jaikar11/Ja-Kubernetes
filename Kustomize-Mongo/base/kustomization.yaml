@@ -1,0 +1,10 @@
+# resources:
+#   - mongo-db-deploy.yaml
+#   - mongo-express-deploy.yaml
+#   - mongo-secrets.yaml
+#   - mongo-services.yaml
+
+# commonLabels:
+#   type: demo
+# commonAnnotations:
+#   version: 1.1.0

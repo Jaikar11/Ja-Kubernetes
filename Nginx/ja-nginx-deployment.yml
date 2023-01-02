@@ -6,7 +6,7 @@ metadata:
     app: ja-nginx
   namespace: ja-nginx-env
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: ja-nginx
@@ -19,4 +19,4 @@ spec:
       - name: nginx
         image: nginx:1.14.2
         ports:
-        - containerPort: 8080
+        - containerPort: 80

@@ -6,9 +6,9 @@ metadata:
 spec:
     selector:
       app: ja-nginx
-    type: LoadBalancer
+    type: NodePort
     ports:
      - protocol: TCP
-       port: 8080
-       targetPort: 8080
-       nodePort: 30004
+       port: 80
+       targetPort: 80
+       nodePort: 30080

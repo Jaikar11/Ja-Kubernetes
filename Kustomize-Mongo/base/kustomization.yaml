@@ -5,7 +5,5 @@ resources:
   - mongo-services.yaml
 
 namePrefix: ja-
-commonLabels:
-  type: demo
 commonAnnotations:
   version: 0.0.1

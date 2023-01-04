@@ -3,6 +3,7 @@ bases:
 namePrefix: ja-pre-prod-
 commonLabels:
   env: pre-prod
+namespace: pre-prod
 configMapGenerator:
 - name: mongo-configmap
   files:

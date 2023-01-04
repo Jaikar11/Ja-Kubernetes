@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v1   # PATCH TO UPDATE NODEPORT to 30811
 kind: Service
 metadata:
   name: mongo-express-service

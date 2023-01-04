@@ -1,9 +1,16 @@
-resources:
-  - mongo-db-deploy.yaml
-  - mongo-express-deploy.yaml
-  - mongo-secrets.yaml
-  - mongo-services.yaml
-
-namePrefix: ja-
-commonAnnotations:
-  version: 0.0.1
+bases:
+- ../../base/
+namePrefix: ja-stage-
+commonLabels:
+  env: stage
+configMapGenerator:
+- name: mongo-configmap
+  files:
+  - mongo-configmap.config
+secretGenerator:
+- name: mongo-creds
+  behavior: create
+  envs:
+  - mongo-secret.env  # This should be in env format for key pair values
+patches:
+- patch.yaml   # Patching to update NodePort

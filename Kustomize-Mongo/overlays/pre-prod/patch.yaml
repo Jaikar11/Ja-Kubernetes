@@ -5,11 +5,8 @@ metadata:
   labels:
     app: mongoexpress-service
 spec:
-  selector:
-    app: ja-mongo-express
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8081 # Port accessible inside cluster
       targetPort: 8081 # Port accessible inside the pod
-      nodePort: 30000 # Port accessible outside cluster
+      nodePort: 30811 # Port accessible outside cluster  ## NODEPORT WILL BE UPDATED in pre-prod using KUSTOMIZE

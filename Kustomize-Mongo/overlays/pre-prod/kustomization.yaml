@@ -6,8 +6,8 @@ commonLabels:
 namespace: pre-prod
 configMapGenerator:
 - name: mongo-configmap
-  files:
-  - mongo-configmap.config
+  envs:
+  - mongo-configmap.env
 secretGenerator:
 - name: mongo-creds
   behavior: create

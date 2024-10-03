@@ -1,0 +1,12 @@
+apiVersion: v1     # PATCH TO UPDATE NODEPORT to 30812
+kind: Service
+metadata:
+  name: mongo-express-service
+  labels:
+    app: mongoexpress-service
+spec:
+  ports:
+    - protocol: TCP
+      port: 8081 # Port accessible inside cluster
+      targetPort: 8081 # Port accessible inside the pod
+      nodePort: 30812 # Port accessible outside cluster  ## NODEPORT WILL BE UPDATED in pre-prod using KUSTOMIZE

@@ -1,0 +1,17 @@
+bases:
+- ../../base/
+namePrefix: ja-pre-prod-
+commonLabels:
+  env: pre-prod
+namespace: pre-prod
+configMapGenerator:
+- name: mongo-configmap
+  envs:
+  - mongo-configmap.env
+secretGenerator:
+- name: mongo-creds
+  behavior: create
+  envs:
+  - mongo-secret.env  # This should be in env format for key pair values
+patches:
+- patch.yaml   # Patching to update NodePort

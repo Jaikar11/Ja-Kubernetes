@@ -14,7 +14,7 @@ spec:
     namespace: ja-nginx
   syncPolicy:
     automated:
-        enabled: true
+        selfHeal: true
         prune: true
     syncOptions:
     - CreateNamespace=true
